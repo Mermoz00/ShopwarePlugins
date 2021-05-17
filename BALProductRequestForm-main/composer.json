@@ -1,0 +1,30 @@
+{
+    "name": "bal/product-request-form",
+    "description": "Anfrageformular zum Artikel auf der Detailseite",
+    "version": "v1.0.0",
+    "type": "shopware-platform-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "bits & likes GmbH"
+        }
+    ],
+    "require": {
+        "shopware/core": "*",
+        "shopware/administration": "*",
+        "shopware/storefront": "*"
+    },
+    "extra": {
+        "shopware-plugin-class": "BAL\\ProductRequestForm\\ProductRequestForm",
+        "copyright": "(c) by bits & likes GmbH",
+        "label": {
+            "de-DE": "Anfrageformular",
+            "en-GB": "Request form"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "BAL\\ProductRequestForm\\": "src/"
+        }
+    }
+}

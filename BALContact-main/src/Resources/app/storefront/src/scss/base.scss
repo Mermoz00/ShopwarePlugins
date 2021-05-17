@@ -1,0 +1,50 @@
+.visitcard {
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.05);
+    max-width: 280px;
+    min-width: 188px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+.visitcard .title {
+    padding: 1rem;
+    text-align: right;
+    color: black;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 4px 4px 4px 50px;
+}
+.visitcard .email {
+    padding: 0.5rem 1rem;
+    font-size: 14px;
+}
+.visitcard .phone {
+    font-size: 14px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    padding: 0.5rem 1rem;
+    padding-top: 0px;
+}
+.visitcard svg {
+    width: 85px;
+    height: 85px;
+    margin: 0 auto;
+}
+.visitcard-text {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+path {
+    fill: white;
+}
+.title-total hr {
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    border-top: 4px solid red;
+    width:70px;
+    border-top: 5px solid #d00;
+}

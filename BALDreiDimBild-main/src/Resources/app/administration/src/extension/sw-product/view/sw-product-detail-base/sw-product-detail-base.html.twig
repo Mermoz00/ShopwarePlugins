@@ -1,0 +1,6 @@
+{% block sw_product_detail_attribute_sets %}
+	{{parent() }}
+	<sw-card :title="$t('bal-three.detail.threeCardLabel')" :isloading="isLoading">
+		<sw-entity-many-to-many-select :localmode="product.isNew()" :label="$t('bal-three.detail.threeSelectLabel')" v-model="product.extensions.threes" :placeholder="$t('bal-three.detail.threeSelectPlaceholder')"></sw-entity-many-to-many-select>
+	</sw-card>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% block sw_product_detail_attribute_sets %}
+    {% parent() %}
+    <sw-card :title="$t('bal-contact.detail.balContactCardLabel')"
+             :isLoading="isLoading">
+        <sw-entity-many-to-many-select
+           :localMode="product.isNew()"
+            :label="$t('bal-contact.detail.balContactAssignLabel')"
+            v-model="product.extensions.contacts"
+            labelProperty="firstname"
+            :placeholder="$t('bal-contact.detail.balContactSelectLabel')">
+        </sw-entity-many-to-many-select>
+    </sw-card>
+{% endblock %}

@@ -1,0 +1,11 @@
+{
+  "wagner": {
+    "productForm": {
+      "button": "Jetzt Produktanfrage stellen",
+      "submit": "Unverbindlich anfragen",
+      "success": "Vielen Dank für Ihre Anfrage.",
+      "commentLabel": "Beschreiben Sie uns Ihre Anfrage gerne mit eigenen Worten",
+      "commentPlaceholder": "Ihr Kommentar an uns"
+    }
+  }
+}

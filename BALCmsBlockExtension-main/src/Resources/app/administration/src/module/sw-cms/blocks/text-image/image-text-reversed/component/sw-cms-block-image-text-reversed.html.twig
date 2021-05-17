@@ -1,0 +1,13 @@
+{% block sw_cms_block_image_text_reversed %}
+
+    <div class="sw-cms-block-center-text">
+        <div class="child sw-cms-block-center-text__image-left">
+            <slot name="left">{% block sw_cms_block_image_text_reversed_slot_left %}{% endblock %}</slot>
+        </div>
+
+        <div class="child sw-cms-block-center-text__image-right">
+            <slot name="right"> {% block sw_cms_block_image_text_reversed_slot_right %}{% endblock %}</slot>
+        </div>
+    </div>
+
+{% endblock %}

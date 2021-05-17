@@ -1,0 +1,55 @@
+{% sw_extends '@Storefront/storefront/element/cms-element-image-gallery.html.twig' %}
+
+{% block element_image_gallery_inner %}
+    {% if (page.product.extensions['threes'].elements|length > 0) %}
+        {% set imageCount=mediaItems|length + 1 %}
+    {% endif %}
+
+    {{ parent() }}
+
+{% endblock element_image_gallery_inner %}
+
+
+{% block element_image_gallery_inner_items %}
+
+    {{ parent() }}
+
+    {% if page.product.extensions['threes'].elements|length > 0 %}
+        {% if page.extensions.data.image %}
+            <model-viewer id="box" src='{{ page.product.extensions['threes'].elements|first.path }}'
+                          style="background-image:url('{{ page.extensions.data.image }}');height: 400px;"
+                          alt="A 3D model" auto-rotate camera-controls></model-viewer>
+        {% else %}
+            <model-viewer id="box" src='{{ page.product.extensions['threes'].elements|first.path }}'
+                          style="background-color:{{ page.extensions.data.color }};height:400px;" alt="A 3D model"
+                          auto-rotate camera-controls></model-viewer>
+        {% endif %}
+    {% endif %}
+{% endblock element_image_gallery_inner_items %}
+
+ {% block element_image_gallery_slider_dots_buttons %}
+     {{ parent() }}
+
+     {% if page.product.extensions['threes'].elements|length > 0 %}
+         <button class="base-slider-dot"
+                 data-nav-dot="{{ mediaItems|length+1 }}"
+                 tabindex="-1"></button>
+     {% endif %}
+ {% endblock element_image_gallery_slider_dots_buttons %}
+
+
+
+
+{% block element_image_gallery_inner_thumbnails_items %}
+    {{ parent() }}
+
+    {% if page.product.extensions['threes'].elements|length > 0 %}
+        <div class="gallery-slider-thumbnails-item">
+            <div class="gallery-slider-thumbnails-item-inner">
+                <img src="{{ asset('bundles/dreidimbild/3dblock.png') }}"
+                     style="width:60px; height: 60px;"  alt="3D View Icon">
+            </div>
+        </div>
+    {% endif %}
+{% endblock element_image_gallery_inner_thumbnails_items %}
+

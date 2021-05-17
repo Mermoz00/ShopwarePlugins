@@ -1,0 +1,25 @@
+.sw-cms-block-center-text {
+    display: flex;
+    flex-wrap: wrap;
+    .child{
+        flex-grow: 1;
+    }
+    .sw-cms-block-center-text__image-right {
+
+        max-width: 320px;
+        height: auto;
+    }
+
+    .sw-cms-block-center-text__image-left {
+        flex-grow:3;
+    }
+}
+.sw-cms-el-image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sw-cms-slot{
+    height: auto;
+}
+

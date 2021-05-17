@@ -1,0 +1,24 @@
+{% block bal_contact_list %}
+    <sw-page class="bal-contact-list">
+        {% block bal_contact_list_smart_bar_actions %}
+            <template slot="smart-bar-actions">
+                <sw-button variant="primary" :routerLink="{ name: 'bal.contact.create' }">
+                    {{ $t('bal-contact.list.addButtonText') }}
+                </sw-button>
+            </template>
+        {% endblock %}
+
+        <template slot="content">
+            {% block bal_contact_list_content %}
+                <sw-entity-listing
+                    v-if="contacts"
+                    :items="contacts"
+                    :repository="repository"
+                    :showSelection="false"
+                    :columns="columns"
+                    detailRoute="bal.contact.detail">
+                </sw-entity-listing>
+            {% endblock %}
+        </template>
+    </sw-page>
+{% endblock %}

@@ -1,0 +1,11 @@
+{
+  "wagner": {
+    "productForm": {
+      "button": "Place product enquiry",
+      "submit": "Send enquiry",
+      "success": "Thank you for your interest in our products.",
+      "commentLabel": "Feel free to describe your request in your own words",
+      "commentPlaceholder": "Your comment to us"
+    }
+  }
+}

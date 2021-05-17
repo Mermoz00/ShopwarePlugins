@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <!-- Default configuration for services in *this* file -->
+        <defaults autowire="true" autoconfigure="true"/>
+        <!-- makes classes in src/ available to be used as services -->
+        <!-- this creates a service per class whose id is the fully-qualified class name -->
+        <prototype namespace="BAL\DreiDimBild\" resource="../src/*" exclude="../src/{DependencyInjection,Entity,Tests,Kernel.php}"/>
+
+        <service id="BAL\DreiDimBild\Core\Content\Product\ProductExtension">
+            <tag name="shopware.entity.extension"/>
+        </service>
+
+        <service id="BAL\DreiDimBild\Core\Content\Three\ThreeDefinition">
+            <tag name="shopware.entity.definition" entity="bal_three" />
+        </service>
+
+        <service id="BAL\DreiDimBild\Core\Content\Three\Aggregate\ThreeProduct\ThreeProductDefinition">
+            <tag name="shopware.entity.definition" entity="bal_three_product"/>
+        </service>
+        <service id="BAL\DreiDimBild\Storefront\Page\Product\Subscriber\ProductPageCriteriaSubscriber">
+            <argument id="category.repository" type="service"/>
+            <argument id="media.repository" type="service"/>
+            <tag name="kernel.event_subscriber"/>
+        </service>
+        <service id="BAL\DreiDimBild\Storefront\Page\Product\Subscriber\ViewerBackgroundOptions">
+        </service>
+        <service id="BAL\DreiDimBild\Core\Api\ThreeController" public="true">
+        </service>
+
+    </services>
+</container>

@@ -1,0 +1,30 @@
+{
+    "name": "bal/plugin-contact",
+    "description": "Ansprechpartner anzeigen",
+    "type": "shopware-platform-plugin",
+    "version": "v1.0.0",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "7pkonzepte AG"
+        }
+    ],
+    "require": {
+        "shopware/core": "*",
+        "shopware/administration": "*",
+        "shopware/storefront": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "BAL\\Contact\\": "src/"
+        }
+    },
+    "extra": {
+        "shopware-plugin-class": "BAL\\Contact\\Contact",
+        "copyright": "(c) by 7pkonzepte AG",
+        "label": {
+            "de-DE": "Ansprechspartner anzeigen",
+            "en-GB": "Show contact persons"
+        }
+    }
+}

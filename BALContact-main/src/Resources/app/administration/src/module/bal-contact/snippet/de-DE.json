@@ -1,0 +1,30 @@
+{
+    "bal-contact": {
+        "general": {
+            "mainMenuItemGeneral": "Ansprechpartner",
+            "descriptionTextModule": "Ansprechpartnerverwaltung"
+        },
+        "list": {
+            "addButtonText": "neue Ansprechpartner",
+            "columnId": "AnsprechpartnerId",
+            "columnFirstName": "Vorname",
+            "columnLastName": "Nachname",
+            "columnEmail": "Email",
+            "columnPhone": "Telephonnummer"
+        },
+        "detail": {
+            "balContactCardLabel": "Ansprechpartnerverwaltung",
+            "balContactAssignLabel": "Ansprechpartner Zuweisung",
+            "balContactSelectLabel": "Wählen Sie den Ansprechpartner ",
+            "contactCardLabel": "Ansprechpartner Verwaltung",
+            "firstNameLabel": "Vorname",
+            "lastNameLabel": "Nachname",
+            "emailLabel": "Email",
+            "phoneNumberLabel": "Rufnummer",
+            "cancelButtonText": "Abbrechen",
+            "saveButtonText": "Speichern",
+            "errorTitle": "Fehler beim Speichern des Ansprechpartners",
+            "uploadLabel": "3D Bild Hochladen"
+        }
+    }
+}

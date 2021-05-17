@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="../../../engine/Shopware/Components/Plugin/schema/plugin.xsd">
+
+    <label lang="de">3D-Bild Konfigurator</label>
+    <label lang="en">3D picture manager</label>
+
+    <version>1.0.0</version>
+    <copyright>(c) by 7P.konzepte GmbH</copyright>
+    <license>Proprietär</license>
+    <author>7P.konzepte GmbH</author>
+    <link>http://www.7pkonzepte.de/</link>
+    <compatibility minVersion="5.6.9"/><!--maxVersion-->
+
+    <changelog version="1.0.0">
+        <changes lang="de">
+            <![CDATA[
+                <ul>
+                    <li>Aktualisierung auf 5.6.9</li>
+                </ul>
+            ]]>
+        </changes>
+        <changes lang="en">
+            <![CDATA[
+                <ul>
+                    <li>Update to 5.6.9</li>
+                </ul>
+            ]]>
+        </changes>
+    </changelog>
+
+
+    <changelog version="1.0.0">
+        <changes lang="de">Veröffentlichung</changes>
+        <changes lang="en">Release</changes>
+    </changelog>
+
+    <description lang="de">Wird nur auf der Produkt Detail-Seite angezeigt.</description>
+    <description lang="en">Is only displayed on the product detail page.</description>
+</plugin>

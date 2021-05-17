@@ -1,0 +1,29 @@
+{
+    "bal-contact": {
+        "general": {
+            "mainMenuItemGeneral": "Contact person",
+            "descriptionTextModule": "Contact person management"
+        },
+        "list": {
+            "addButtonText": "neue Ansprechpartner",
+            "columnId": "ContactId",
+            "columnFirstName": "First Name",
+            "columnLastName": "Last Name",
+            "columnEmail": "Email",
+            "columnPhone": "Rufnummer"
+        },
+        "detail": {
+            "balContactCardLabel": "Contact person management",
+            "balContactAssignLabel": "Assign Contact person",
+            "balContactSelectLabel": "Select the contact person",
+            "contactCardLabel": "Contact persons management",
+            "firstNameLabel": "Firstname",
+            "lastNameLabel": "Lastname",
+            "emailLabel": "Email",
+            "phoneNumberLabel": "Phone number",
+            "cancelButtonText": "Cancel",
+            "saveButtonText": "Save",
+            "errorTitle": "Error saving the bundle"
+        }
+    }
+}

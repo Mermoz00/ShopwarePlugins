@@ -1,0 +1,30 @@
+{% block balcontact_detail %}
+    <sw-page class="bal-contact-detail">
+        <template slot="smart-bar-actions">
+            <sw-button :routerLink="{ name: 'bal.contact.list' }">
+                {{ $t('bal-contact.detail.cancelButtonText') }}
+            </sw-button>
+
+            <sw-button-process
+                :isLoading="isLoading"
+                :processSuccess="processSuccess"
+                variant="primary"
+                @process-finish="saveFinish"
+                @click="onClickSave">
+                {{ $t('bal-contact.detail.saveButtonText') }}
+            </sw-button-process>
+        </template>
+
+        <template slot="content">
+            <sw-card-view>
+                <sw-card v-if="contact" :isLoading="isLoading">
+
+                    <sw-field :label="$t('bal-contact.detail.firstNameLabel')" v-model="contact.firstname" type="string"></sw-field>
+                    <sw-field :label="$t('bal-contact.detail.lastNameLabel')" v-model="contact.lastname" type="string"></sw-field>
+                    <sw-field :label="$t('bal-contact.detail.emailLabel')" v-model="contact.email" type="string"></sw-field>
+                    <sw-field :label="$t('bal-contact.detail.phoneNumberLabel')" v-model="contact.phonenumber" type="string"></sw-field>
+                </sw-card>
+            </sw-card-view>
+        </template>
+    </sw-page>
+{% endblock %}

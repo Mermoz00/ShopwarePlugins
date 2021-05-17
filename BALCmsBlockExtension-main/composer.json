@@ -1,0 +1,35 @@
+{
+
+    "name": "bal/cms-block-extension",
+    "description": "plugin which adds a text-image block for the CMS",
+    "version": "v1.0.0",
+    "type": "shopware-platform-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "bits & likes GmbH"
+        }
+    ],
+    "require": {
+        "shopware/core": "*",
+        "shopware/administration": "*",
+        "shopware/storefront": "*"
+    },
+    "extra": {
+        "shopware-plugin-class": "BAL\\CmsBlockExtension\\CmsBlockExtension",
+        "copyright": "(c) by bits & likes GmbH",
+        "label": {
+            "de-DE": "Text-Bild Block",
+            "en-GB": "Text-image block"
+        },
+        "description": {
+            "de-DE": "2/3 Text und 1/3 Bild ",
+            "en-GB": "2/3 Text und 1/3 picture"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "BAL\\CmsBlockExtension\\": "src/"
+        }
+    }
+}

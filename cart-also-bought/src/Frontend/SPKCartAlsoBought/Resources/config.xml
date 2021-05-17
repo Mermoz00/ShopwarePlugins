@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/shopware/5.3/engine/Shopware/Components/Plugin/schema/config.xsd">
+    <elements>
+        <element required="true" type="boolean" scope="locale">
+            <name>crossSellingInCart</name>
+            <label lang="de">Cross-Selling auf der Warenkorb-Seite anzeigen</label>
+            <label lang="en">Show cross selling on the cart page</label>
+            <value>Ja</value>
+        </element>
+        <element required="true" type="boolean" scope="locale">
+            <name>crossSellingInConfirmTemplate</name>
+            <label lang="de">Cross-Selling auf der Prüf- und Bestell-Seite anzeigen</label>
+            <label lang="en">Show cross selling on the check and order page </label>
+            <value>Ja</value>
+        </element>
+        <element required="true" type="boolean" scope="locale">
+            <name>crossSellingInShippingPaymentTemplate</name>
+            <label lang="de">Cross-Selling auf der Zahlungs- und Versand-Seite anzeigen</label>
+            <label lang="en">Show cross selling on the payment and shipping method page</label>
+            <value>Ja</value>
+        </element>
+        <element required="true" type="boolean" scope="locale">
+            <name>crossSellingLastSeen</name>
+            <label lang="de">Cross-Selling im Off-Canvas Warenkorb anzeigen</label>
+            <label lang="en">Show cross selling on the off canvas cart</label>
+            <value>Ja</value>
+        </element>
+        <element required="true" type="number" scope="locale">
+            <name>maxProducts</name>
+            <label lang="de">Maximale Anzahl der angezeigten Artikel</label>
+            <label lang="en">Maximum article count</label>
+            <value>10</value>
+        </element>
+        <element required="true" type="boolean" scope="locale">
+            <name>logging</name>
+            <label lang="de">Debug Logging anschalten</label>
+            <label lang="en">Enable debug logging</label>
+            <value>0</value>
+        </element>
+    </elements>
+</config>

@@ -1,0 +1,106 @@
+<div class="modal fade right" id="productRequestForm" tabindex="-1" role="dialog" aria-labelledby="productRequestFormLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="productRequestFormLabel">{{ page.product.translated.name }}</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+				<div class="cms-block">
+					<div class="cms-element-form">
+						<form action="{{ path(action) }}"
+							  method="post"
+							  data-form-csrf-handler="true"
+							  data-form-validation="true">
+
+							<div class="form-content">
+								<div class="form-row">
+									{% block cms_form_contact_input_first_name %}
+										{% sw_include '@Storefront/storefront/element/cms-element-form/form-components/cms-element-form-input.html.twig'
+											with {
+											fieldName: 'firstName',
+											required: false,
+											additionalClass: 'col-md-6',
+											label: 'account.personalFirstNameLabel',
+											placeholder: 'account.personalFirstNamePlaceholder'
+										} %}
+									{% endblock %}
+
+									{% block cms_form_contact_input_last_name %}
+										{% sw_include '@Storefront/storefront/element/cms-element-form/form-components/cms-element-form-input.html.twig'
+											with {
+											fieldName: 'lastName',
+											required: false,
+											additionalClass: 'col-md-6',
+											label: 'account.personalLastNameLabel',
+											placeholder: 'account.personalLastNamePlaceholder'
+										} %}
+									{% endblock %}
+								</div>
+
+								<div class="form-row">
+									{% block cms_form_contact_input_email %}
+										{% sw_include '@Storefront/storefront/element/cms-element-form/form-components/cms-element-form-input.html.twig'
+											with {
+											fieldName: 'email',
+											type: 'email',
+											required: true,
+											additionalClass: 'col-md-12',
+											label: 'account.loginMailLabel',
+											placeholder: 'account.loginMailPlaceholder'
+										} %}
+									{% endblock %}
+								</div>
+
+								<div class="form-row">
+									{% block cms_form_contact_comment_textarea %}
+										{% sw_include '@Storefront/storefront/element/cms-element-form/form-components/cms-element-form-textarea.html.twig'
+											with {
+											rows: 6,
+											required: false,
+											fieldName: 'comment',
+											additionalClass: 'col-12',
+											label: 'wagner.productForm.commentLabel',
+											placeholder: 'wagner.productForm.commentPlaceholder'
+										} %}
+									{% endblock %}
+								</div>
+
+								{% block cms_form_contact_required_fields_info %}
+									{% sw_include '@Storefront/storefront/element/cms-element-form/form-components/cms-element-form-info-required.html.twig' %}
+								{% endblock %}
+
+								{% block cms_form_contact_captcha %}
+									{% sw_include '@Storefront/storefront/component/captcha/base.html.twig' with { 'captchas': shopware.config.core.basicInformation.activeCaptchas } %}
+								{% endblock %}
+
+								{% block cms_form_contact_privacy %}
+									{% sw_include '@Storefront/storefront/element/cms-element-form/form-components/cms-element-form-privacy.html.twig' %}
+								{% endblock %}
+
+								<button type="submit" class="btn btn-primary mt-4">
+									{{ ( submitText ? submitText : 'general.formSubmit' )|trans }}
+								</button>
+
+								{% block cms_form_contact_hidden_fields %}
+									<div class="form-hidden-fields">
+										{% block cms_form_contact_csrf %}
+											{{ sw_csrf(action) }}
+										{% endblock %}
+                                        <input type="text" class="d-none" name="productNumber" value="{{ page.product.productNumber }}" readonly >
+
+										<input type="submit" class="submit--hidden d-none"/>
+									</div>
+								{% endblock %}
+
+							</div>
+						</form>
+					</div>
+				</div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+{
+  "name": "bal/plugin-bild-in-3d-bearbeitung",
+  "description": "Ein Plugin, welches einen erlaubt ein 3D-Bild / 3D-Ansicht zu einem Produkt hinzuzufügen. Gültige Formate: .glb .gltf",
+  "type": "shopware-platform-plugin",
+  "version": "v1.0.0",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "bits & likes GmbH"
+    }
+  ],
+  "require": {
+    "shopware/core": ">=6.1",
+    "shopware/administration": ">=6.1",
+    "shopware/storefront": ">=6.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "BAL\\DreiDimBild\\": "src/"
+    }
+  },
+  "extra": {
+    "shopware-plugin-class": "BAL\\DreiDimBild\\DreiDimBild",
+    "copyright": "(c) by bits & likes GmbH",
+    "label": {
+      "de-DE": "3D-Bild Konfigurator",
+      "en-GB": "3D-Image configurator"
+    }
+  }
+}

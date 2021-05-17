@@ -1,0 +1,26 @@
+{
+    "bal-three": {
+        "general": {
+            "mainMenuItemGeneral": "3D Bilder",
+            "descriptionTextModule": "Verwalten Sie Ihre 3D-Bilder hier"
+        },
+        "list": {
+            "addButtonText": "3D-Bild hochladen",
+            "columnId": "ProductId",
+            "columnPath": "3D-Bild Pfad",
+            "columnName": "Name"
+        },
+        "detail": {
+            "threeSelectPlaceholder": "Wählen Sie den Namen Ihres 3D-Bildes",
+            "threeSelectLabel": "3D-Bild Zuweisung",
+            "threeCardLabel": "Three Verwaltung",
+            "nameLabel": "Name (Pflichtfeld)",
+            "pathLabel": "3D-Bild path",
+            "assignProductsLabel": "Produkte zuweisen",
+            "cancelButtonText": "Abbrechen",
+            "saveButtonText": "Speichern",
+            "errorTitle": "Fehler beim Speichern des 3D-Bildes",
+            "uploadLabel": "3D-Bild Hochladen"
+        }
+    }
+}

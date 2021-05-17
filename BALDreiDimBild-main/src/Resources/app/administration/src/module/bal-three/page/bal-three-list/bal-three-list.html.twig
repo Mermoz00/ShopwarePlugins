@@ -1,0 +1,24 @@
+{% block bal_three_list %}
+    <sw-page class="bal-three-list">
+        {% block bal_three_list_smart_bar_actions %}
+            <template slot="smart-bar-actions">
+                <sw-button variant="primary" :routerLink="{ name: 'bal.three.create' }">
+                    {{ $t('bal-three.list.addButtonText') }}
+                </sw-button>
+            </template>
+        {% endblock %}
+
+        <template slot="content">
+            {% block bal_three_list_content %}
+                <sw-entity-listing
+                    v-if="threes"
+                    :items="threes"
+                    :repository="repository"
+                    :showSelection="false"
+                    :columns="columns"
+                    detailRoute="bal.three.detail">
+                </sw-entity-listing>
+            {% endblock %}
+        </template>
+    </sw-page>
+{% endblock %}

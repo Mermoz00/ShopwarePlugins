@@ -1,0 +1,33 @@
+{% block bal_three_detail %}
+    <sw-page class="bal-three-detail">
+        <template slot="smart-bar-actions">
+            <sw-button :routerLink="{ name: 'bal.three.list' }">
+                {{ $t('bal-three.detail.cancelButtonText') }}
+            </sw-button>
+
+            <sw-button-process
+                :isLoading="isLoading"
+                :processSuccess="processSuccess"
+                variant="primary"
+                @process-finish="saveFinish"
+                @click="onClickSave">
+                {{ $t('bal-three.detail.saveButtonText') }}
+            </sw-button-process>
+        </template>
+
+        <template slot="content">
+            <sw-card-view>
+                <sw-card v-if="three" :isLoading="isLoading">
+
+                    <sw-field :label="$t('bal-three.detail.nameLabel')" v-model="three.name" type="string"></sw-field>
+                    <sw-file-input
+                        label="Upload 3D picture"
+                        :maxFileSize="8*1024*10024"
+                        @change="onFileSelected">
+                    </sw-file-input>
+                    <sw-field :label="$t('bal-three.detail.pathLabel')" v-model="three.path" type="string"></sw-field>
+                </sw-card>
+            </sw-card-view>
+        </template>
+    </sw-page>
+{% endblock %}

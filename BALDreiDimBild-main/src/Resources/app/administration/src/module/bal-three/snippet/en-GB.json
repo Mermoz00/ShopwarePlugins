@@ -1,0 +1,26 @@
+{
+    "bal-three": {
+        "general": {
+            "mainMenuItemGeneral": "3D-Pictures",
+            "descriptionTextModule": "Manage 3D-picture here"
+        },
+        "list": {
+            "addButtonText": "Upload 3D-pictures",
+            "columnId": "Procduct Id",
+            "columnPath": "3D picture path",
+            "columnName": "Name"
+        },
+        "detail": {
+            "threeSelectPlaceholder": "Choose your 3D-picture's name",
+            "threeSelectLabel": "Assign 3D-picture",
+            "threeCardLabel": "3D-Configuration",
+            "nameLabel": "Name (Required)",
+            "pathLabel": "3D picture path",
+            "assignProductsLabel": "Assign Element",
+            "cancelButtonText": "Cancel",
+            "saveButtonText": "Save",
+            "errorTitle": "Error saving the bundle",
+            "uploadLabel": "Upload 3D picture"
+        }
+    }
+}
