@@ -1,0 +1,19 @@
+{% sw_extends '@Storefront/storefront/layout/header/search-suggest.html.twig' %}
+  {% block layout_search_suggest_result_price %}
+      <div class="col-auto search-suggest-product-price">
+          {% if not product.customFields["custom_hide_price"] %}
+              {% if product.priceRange %}
+                  {{ product.calculatedListingPrice.from.unitPrice|currency }}
+                  -
+                  {{ product.calculatedListingPrice.to.unitPrice|currency}}
+              {% elseif product.calculatedPrices|length == 1 %}
+                  {{ product.calculatedPrices.first.unitPrice|currency }}
+              {% else %}
+                  {{ product.calculatedPrice.unitPrice|currency }}
+              {% endif %}
+              {% if product.calculatedPrice.referencePrice is not null %}
+                  <br><small class="search-suggest-product-reference-price">({{ product.calculatedPrice.referencePrice.price|currency }}{{ "general.star"|trans|sw_sanitize }} / {{ product.calculatedPrice.referencePrice.referenceUnit }}&nbsp;{{ product.calculatedPrice.referencePrice.unitName }})</small>
+              {% endif %}
+          {% endif %}
+      </div>
+  {% endblock %}

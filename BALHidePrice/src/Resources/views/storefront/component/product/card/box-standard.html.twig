@@ -1,0 +1,19 @@
+{% sw_extends '@Storefront/storefront/component/product/card/box-standard.html.twig' %}
+ {% block component_product_box_price %}
+    {% if (product.customFields["custom_hide_price"])  %}
+        <div class="product-price-info">
+            <p class="product-price-unit">
+
+            </p>
+            <p class="product-price">
+                {{ "hidePrice.label"|trans }}
+            </p>
+        </div>
+
+    {% else %}
+        {% sw_include '@Storefront/storefront/component/product/card/price-unit.html.twig' %}
+    {% endif %}
+ {% endblock %}
+  {% block component_product_box_action %}
+      {% sw_include '@Storefront/storefront/component/product/card/action.html.twig' %}
+  {% endblock %}

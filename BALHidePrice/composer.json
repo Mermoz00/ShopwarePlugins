@@ -1,0 +1,30 @@
+{
+    "name": "bal/hide-price",
+    "description": "plugin which help user to hide the price of the product",
+    "version": "v1.0.0",
+    "type": "shopware-platform-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "bits & likes GmbH"
+        }
+    ],
+    "require": {
+        "shopware/core": "*",
+        "shopware/administration": "*",
+        "shopware/storefront": "*"
+    },
+    "extra": {
+        "shopware-plugin-class": "BAL\\HidePrice\\HidePrice",
+        "copyright": "(c) by bits & likes GmbH",
+        "label": {
+            "de-DE": "Preis verstecken",
+            "en-GB": "Hide the Price"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "BAL\\HidePrice\\": "src/"
+        }
+    }
+}

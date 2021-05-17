@@ -1,0 +1,12 @@
+{% sw_extends '@Storefront/storefront/page/product-detail/buy-widget.html.twig' %}
+{% block page_product_detail_price %}
+    <div class="product-detail-price-container">
+        {% if (page.product.customFields["custom_hide_price"])  %}
+            <div style="background-color: #eee;padding: 15px;margin-bottom: 30px;">
+                {{ "hidePrice.label"|trans }}
+            </div>
+        {% else %}
+            {% sw_include '@Storefront/storefront/page/product-detail/buy-widget-price.html.twig' %}
+        {% endif %}
+    </div>
+{% endblock %}

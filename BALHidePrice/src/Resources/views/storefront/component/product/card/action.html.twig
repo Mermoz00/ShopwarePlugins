@@ -1,0 +1,14 @@
+{% sw_extends '@Storefront/storefront/component/product/card/action.html.twig' %}
+{% block component_product_box_action_form %}
+    {% if (product.customFields["custom_hide_price"])  %}
+          <button class="btn btn-block btn-buy"
+                  title="{{ "listing.boxAddProduct"|trans|striptags }}" disabled>
+              {{ "listing.boxAddProduct"|trans|sw_sanitize }}
+          </button>
+    {% else %}
+        <button class="btn btn-block btn-buy"
+                title="{{ "listing.boxAddProduct"|trans|striptags }}">
+            {{ "listing.boxAddProduct"|trans|sw_sanitize }}
+        </button>
+    {% endif %}
+{% endblock %}
